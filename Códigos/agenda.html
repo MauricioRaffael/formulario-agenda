@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agenda.css">
+    <title>Agenda</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Agendar Atividades</h1>
+        <p id="subtitulo">Complete suas informações</p><br>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <form id="Formulario" onsubmit="event.preventDefault();funcoesForm();">
+                    <fieldset>
+                        <div class="campo">
+                            <label>Data da Atividade</label><br>
+                            <input type="date" name="datas" id="datas" required><br>
+                        </div>
+                        <div class="campo">
+                            <label>Horário de Início</label><br>
+                            <input type="time" name="horaIni" id="horaIni" required><br>
+                        </div>
+                        <div class="campo">
+                            <label>Horário de Término</label><br>
+                            <input type="time" name="horaFim" id="horaFim" required><br>
+                        </div>
+                        <div class="campo">
+                            <label>Compromisso:</label><br>
+                            <textarea id="msg" name="msg" cols="30" rows="4" required></textarea>
+                        </div>
+                    </fieldset>
+                    <button type="submit" value="Submit" class="botao">Finalizar</button>
+                </form>
+            </td>
+            <td>
+                <table class="lista" id="tabelaAtividades">
+                    <thead>
+                        <tr>
+                            <th>Data da Atividade</th>
+                            <th>Horário de Início</th>
+                            <th>Horário de Término</th>
+                            <th>Compromisso</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="agenda.js"></script>
+</body>
+</html>
